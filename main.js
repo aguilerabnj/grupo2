@@ -14,8 +14,10 @@ class Producto {
 }
 
 let listadeprefumes= [
-    new Producto(1,"Miss dior",500,"fresca y embriagadora",50)
-    new Producto(2,"Carolina herrera",600,"Notas de salida: flor de azahar, notas verdes, palo de rosa y bergamota.")
+    new Producto(1,"Miss dior",500,"fresca y embriagadora",50),
+    new Producto(2,"Carolina herrera",600,"Notas de salida: flor de azahar, notas verdes, palo de rosa y bergamota",40),
+    new Producto(3,"Sweet thooth",700,"malvavisco (bombón), chocolate, Jengibre confitado y bergamota; las Notas de Corazón son vainilla de Madagascar, leche de coco y jazmín",35),
+    new Producto(4,"Cloud",700," olor dulce, gourmand y atalcado, con notas destacadas de lavanda, pera, bergamota, coco batido, praliné, orquídea de vainilla, almizcle y maderas cremosas",43),
     ]
 function cart() {
 
