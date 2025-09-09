@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class Persona {
 	constructor(nombre, dni, edad) {
@@ -36,7 +35,6 @@ class Persona {
 
 
 }
-=======
 //navbar
 class Producto {
 	constructor(id, nombre, precio, descripcion, stock, marca) {
@@ -103,4 +101,3 @@ let columna = document.createElement("div")
 		fila.appendChild(columna)
 	}
 
->>>>>>> 5164d4162ca3f2cf380544fafdae7e7f8e28fd9a
