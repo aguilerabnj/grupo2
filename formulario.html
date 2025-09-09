@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>formulario+dom</title>
+	<link rel="stylesheet" href="./bootstrap-5.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="container-fluid mt-2" id="contenedor"></div>
+			</div>
+			<div class="col-md-4">
+				<input type="number" id="productId" required class="form-control mt-2" placeholder="id">
+				<input type="text" id="productName" required class="form-control mt-2" placeholder="nombre">
+				<input type="text" id="productMark" required class="form-control mt-2" placeholder="marca">
+				<input type="text" id="productDescrip" required class="form-control mt-2" placeholder="descripcion">
+				<input type="number" id="productPrice" required class="form-control mt-2" placeholder="precio">
+				<input type="number" id="productStock" required class="form-control mt-2" placeholder="stock">
+				<div class="row">
+					<div class="col-5"> <button class="btn btn-primary mt-2" id="boton-crear"><i
+								class="bi bi-check"></i></button>
+						<button class="btn btn-primary mt-2" id="boton-crear"> <i class="bi bi-pencil"></i></button>
+					</div>
+					<div class="col-7">
+						<p id="error" class="text-danger mt-3"></p>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<p>filtros</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<select class="form-control" name="" id="propiedad">
+					<option value="todos">todos los productos</option>
+					<option value="marca">marca</option>
+					<option value="nombre">nombre</option>
+					<option value="precio">precio($)</option>
+				</select>
+
+			</div>
+
+
+			<div class="col-md-5"><input class="form-control" type="text " name="" id="valor" placeholder="valor"></div>
+			<div class="col-md-2">
+				<button class="btn btn-warning" id="aplicarfiltro">aplicar filtro</button>
+			</div>
+		</div>
+	</div>
+	<div id="contenedor" class="container">
+
+	</div>
+	<p>formulario</p>
+	<!--	<div class="container">
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<div class="row">
+					<label for="nombre" class="form-label">nombre: <input type="text" class="form-control" name=""
+							id="nombre" placeholder="ingrese su nombre"></label>
+				</div>
+				<div class="row">
+					<label for="dni" class="form-label"> DNI <input type="text" class="form-control" name="" id="dni"
+							placeholder="ingrese su dni"></label>
+				</div>
+				<div class="row">
+					<label for="edad" class="form-label"> edad <input type="number" class="form-control" name=""
+							id="edad" placeholder="ingrese su edad"></label>
+				</div>
+				<div class="row">
+					<button class="btn btn-danger" id="envio">enviar formulario</button>
+				</div>
+			</div>
+			<div class="col-3"></div>
+		</div>
+	</div>
+	-->
+	<ul id="listado"></ul>
+
+
+	<table class="table table-bordered table-secondary border-dark">
+		<thead>
+			<tr>
+				<th>
+					NOMBRE
+				</th>
+				<th>
+					PRECIO
+				</th>
+				<th>
+					STOCK
+				</th>
+				<th>
+					DESCRIPCION
+				</th>
+				<th>
+					MARCA
+				</th>
+				<th>
+					ACCIONES
+				</th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+		</tbody>
+	</table>
+
+	<p> subtotal :<strong id="subtotal"> </strong></p>
+	<button class="btn btn-danger" id="boton">
+		<i class="bi bi-house-heart-fill"> borrar</i>
+	</button>
+	<!-- scripts al final del body  -->
+	<script src="./bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+
+	<script src="formulario.js"></script>
+</body>
+
+</html>
