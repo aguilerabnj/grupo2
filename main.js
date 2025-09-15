@@ -56,14 +56,79 @@ let listadeprefumes= [
     new Producto(3,"Sweet thooth",700,"malvavisco (bombón), chocolate, Jengibre confitado y bergamota; las Notas de Corazón son vainilla de Madagascar, leche de coco y jazmín",35),
     new Producto(4,"Cloud",700," olor dulce, gourmand y atalcado, con notas destacadas de lavanda, pera, bergamota, coco batido, praliné, orquídea de vainilla, almizcle y maderas cremosas",43),
     ]
+	
+const persona2 = new Persona("juan", 48391470, 17)
 
-	let botonfiltro = document.querySelector("#aplicarfiltro")
-botonfiltro.addEventListener("click", function () {
-	cart()
-})
+let personas = []
 
+function enviar() {
+	//let nombre = document.getElementById("nombre").value // captura los datos del formulario mediante el id
+	//let dni = document.getElementById("dni").value
+	//let edad = document.getElementById("edad").value
+	//let persona1 = new Persona(nombre, dni, edad) //crea un objeto con los datos capturados
+
+
+
+	//console.log(persona1)
+	//personas.push(persona1)
+	//console.log(personas)
+
+	//let li = document.createElement("li")
+	//li.textContent = persona1.datos()
+	//ul.appendChild(li)
+
+	if (tbody.innerHTML !== "") {
+		tbody.innerHTML = "";
+	}
+	if (subtotal.innerHTML !== 0) {
+		subtotal.innerHTML = 0
+	}
+
+	persona2.productos.forEach(p => {
+		let tr = document.createElement("tr") //creamos el tr
+		let td1 = document.createElement("td")
+		td1.textContent = p.nombre
+		tr.appendChild(td1)
+		let td2 = document.createElement("td")
+		td2.textContent = `$${p.precio}`
+		tr.appendChild(td2)
+		let td3 = document.createElement("td")
+		td3.textContent = p.marca
+		tr.appendChild(td3)
+		let td4 = document.createElement("td")
+		td4.textContent = p.descripcion
+		tr.appendChild(td4)
+		let td5 = document.createElement("td")
+		td5.textContent = p.stock
+		tr.appendChild(td5)
+		let td6 = document.createElement("td")
+		//crear el boton
+		let botoneliminar = document.createElement("button")
+		botoneliminar.classList.add("btn")
+		botoneliminar.classList.add("btn-danger")
+		let icono = document.createElement("i")
+		icono.classList.add("bi")
+		icono.classList.add("bi-x-square-fill")
+		botoneliminar.appendChild(icono)
+		//AGREGAMOS EVENTO
+		botoneliminar.addEventListener("click", function () {
+			persona2.eliminarproducto(p)
+			enviar()
+			console.log(persona2.productos)
+		}
+		)
+		td6.appendChild(botoneliminar)
+
+		tr.appendChild(td6)
+		tbody.appendChild(tr)
+		subtotal.textContent = persona2.subtotal()
+	});
+}
 fila.classList.add("row")
 function cart() {
+	if (fila.innerHTML !== "") {
+		fila.innerHTML = ""
+	}
 	listadeprefumes.forEach(x => {
 
 let columna = document.createElement("div")
@@ -109,3 +174,7 @@ let columna = document.createElement("div")
 		fila.appendChild(columna)
 	})
 }
+	let botonfiltro = document.querySelector("#aplicarfiltro")
+botonfiltro.addEventListener("click", function () {
+	cart()
+})
