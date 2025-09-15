@@ -4,38 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Perfumeria</title>
 	<link rel="stylesheet" href="./bootstrap-5.3.7-dist/css/bootstrap.min.css">
 </head>
 
 <body>
 	<!--PERFUMERIA-->
-	<div class="container-fluid">
-		<div class="">
-			<div class="col-md-8">
-				<div class="container-fluid mt-2" id="contenedor"></div>
-			</div>
-			<div class="col-md-4">
-				<input type="text" id="nombreyapellidopersona" required class="form-control mt-2"
-					placeholder="Nombre y apellido">
-				<input type="text" id="telefonopersona" required class="form-control mt-2" placeholder="Telefono">
-				<input type="number" id="dnipersona" required class="form-control mt-2" placeholder="DNI">
-				<input type="number" id="tarjetapersona" required class="form-control mt-2" placeholder="Tarjeta">
-				<input type="text" id="direccionpersona" required class="form-control mt-2" placeholder="Direccion">
-				<input type="number" id="codigopostal" required class="form-control mt-2" placeholder="Codigo postal">
-				<div class="row">
-					<div class="col-5"> <button class="btn btn-primary mt-2" id="boton-crear">Pagar<i
-								class="bi bi-check"></i></button>
-
-					</div>
-					<div class="col-7">
-						<p id="error" class="text-danger mt-3"></p>
-					</div>
-
-				</div>
-
-			</div>
-		</div>
+	
 		<div class="row">
 			<div class="col-md-5">
 				<select class="form-control" name="" id="propiedad">
@@ -83,6 +58,14 @@
 		<i class="bi bi-trash"></i>
 		<span>eliminar todo</span>
 	</button>
+
+	<div class="row">
+		<div class="col-5"> <button class="btn btn-dark mt-2" id="boton-crear" onclick="redireccionarPago()">Pagar<i
+					class="bi bi-check"></i></button>
+
+		</div>
+		<script src="pagar.js"></script>
+	</div>
 
 	<script src="main.js"></script>
 </body>
