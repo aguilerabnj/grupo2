@@ -10,69 +10,39 @@
 
 <body>
 	<!--PERFUMERIA-->
-	<header>
 
-	<!--navegador de la pagina (header)-->
-		<div class="container">
-		
-
-		<!--navegador de la pagina (header)-->
-		<nav class="navbar navbar-expand-lg bg-body-tertiary">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">Navbar</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Features</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Pricing</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled" aria-disabled="true">Disabled</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-
-	</header>
 	<main>
-		
-	</div><div class="container-fluid">
-		<div class="row">
-			<div class="col-md-8">
-				<div class="container-fluid mt-2" id="contenedor"></div>
-			</div>
-			<div class="col-md-4">
-				<input type="number" id="productId" required class="form-control mt-2" placeholder="id">
-				<input type="text" id="productName" required class="form-control mt-2" placeholder="nombre">
-				<input type="text" id="productMark" required class="form-control mt-2" placeholder="marca">
-				<input type="text" id="productDescrip" required class="form-control mt-2" placeholder="descripcion">
-				<input type="number" id="productPrice" required class="form-control mt-2" placeholder="precio">
-				<input type="number" id="productStock" required class="form-control mt-2" placeholder="stock">
-				<div class="row">
-					<div class="col-5"> <button class="btn btn-primary mt-2" id="boton-crear"><i
-								class="bi bi-check"></i></button>
-						<button class="btn btn-primary mt-2" id="boton-crear"> <i class="bi bi-pencil"></i></button>
-					</div>
-					<div class="col-7">
-						<p id="error" class="text-danger mt-3"></p>
+		<div class="col-md-2">
+			<button class="btn btn-warning" id="aplicarfiltro">aplicar filtro</button>
+		</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="container-fluid mt-2" id="contenedor"></div>
+				</div>
+				<div class="col-md-4">
+					<input type="number" id="productId" required class="form-control mt-2" placeholder="id">
+					<input type="text" id="productName" required class="form-control mt-2" placeholder="nombre">
+					<input type="text" id="productMark" required class="form-control mt-2" placeholder="marca">
+					<input type="text" id="productDescrip" required class="form-control mt-2" placeholder="descripcion">
+					<input type="number" id="productPrice" required class="form-control mt-2" placeholder="precio">
+					<input type="number" id="productStock" required class="form-control mt-2" placeholder="stock">
+					<div class="row">
+						<div class="col-5"> <button class="btn btn-primary mt-2" id="boton-crear"><i
+									class="bi bi-check"></i></button>
+							<button class="btn btn-primary mt-2" id="boton-crear"> <i class="bi bi-pencil"></i></button>
+						</div>
+						<div class="col-7">
+							<p id="error" class="text-danger mt-3"></p>
+						</div>
+
 					</div>
 
 				</div>
 
 			</div>
-
 		</div>
-	</div>
 		<div class="row">
 			<div class="col-md-5">
 				<select class="form-control" name="" id="propiedad">
@@ -90,10 +60,44 @@
 				<button class="btn btn-warning" id="aplicarfiltro">aplicar filtro</button>
 			</div>
 		</div>
-	</div>
-	<div id="contenedor" class="container">
+		</div>
+		<div id="contenedor" class="container">
 	</main>
+
+
+
+	<footer>
+		<div class="container-fluid">
+			<div class="">
+				<div class="col-md-8">
+					<div class="container-fluid mt-2" id="contenedor"></div>
+				</div>
+				<div class="col-md-4">
+					<input type="text" id="nombreyapellidopersona" required class="form-control mt-2"
+						placeholder="Nombre y apellido">
+					<input type="text" id="telefonopersona" required class="form-control mt-2" placeholder="Telefono">
+					<input type="number" id="dnipersona" required class="form-control mt-2" placeholder="DNI">
+					<input type="number" id="tarjetapersona" required class="form-control mt-2" placeholder="Tarjeta">
+					<input type="text" id="direccionpersona" required class="form-control mt-2" placeholder="Direccion">
+					<input type="number" id="codigopostal" required class="form-control mt-2"
+						placeholder="Codigo postal">
+					<div class="row">
+						<div class="col-5"> <button class="btn btn-primary mt-2" id="boton-crear">Pagar<i
+									class="bi bi-check"></i></button>
+
+						</div>
+						<div class="col-7">
+							<p id="error" class="text-danger mt-3"></p>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</footer>
 	<script src="main.js"></script>
 </body>
-
 </html>

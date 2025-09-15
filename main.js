@@ -56,7 +56,15 @@ let listadeprefumes= [
     new Producto(3,"Sweet thooth",700,"malvavisco (bombón), chocolate, Jengibre confitado y bergamota; las Notas de Corazón son vainilla de Madagascar, leche de coco y jazmín",35),
     new Producto(4,"Cloud",700," olor dulce, gourmand y atalcado, con notas destacadas de lavanda, pera, bergamota, coco batido, praliné, orquídea de vainilla, almizcle y maderas cremosas",43),
     ]
+
+	let botonfiltro = document.querySelector("#aplicarfiltro")
+botonfiltro.addEventListener("click", function () {
+	cart()
+})
+
+fila.classList.add("row")
 function cart() {
+	listadeprefumes.forEach(x => {
 
 let columna = document.createElement("div")
 		columna.classList.add("col-4")
@@ -99,5 +107,5 @@ let columna = document.createElement("div")
 		card.appendChild(cardbody)
 		columna.appendChild(card)
 		fila.appendChild(columna)
-	}
-
+	})
+}
