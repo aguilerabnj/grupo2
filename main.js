@@ -26,8 +26,13 @@ function redireccionarPago() {
 
 let contenedor = document.getElementById("contenedor")
 let tarjeta = document.getElementById("tarjeta1")
+listadeprefumes.forEach(x=> {
 let titulo = document.createElement("h1")
-titulo.textContent = "paco rabanne"
-tarjeta.appendChild(titulo)
+titulo.textContent = x.nombre
+let imagen = document.createElement("img")
+imagen.src = "https://picsum.photos/200/300"
+let precio = 
+tarjeta.append(titulo, imagen)
+})
 
 contenedor.appendChild(tarjeta)
