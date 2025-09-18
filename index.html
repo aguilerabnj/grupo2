@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 	<title>Document</title>
 </head>
 
@@ -51,6 +52,70 @@
 
 
 
+=======
+	<title>Perfumeria</title>
+	<link rel="stylesheet" href="./bootstrap-5.3.7-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+	<!--PERFUMERIA-->
+	
+		<div class="row">
+			<div class="col-md-5">
+				<select class="form-control" name="" id="propiedad">
+					<option value="todos">todos los productos</option>
+					<option value="marca">marca</option>
+					<option value="nombre">nombre</option>
+					<option value="precio">precio($)</option>
+				</select>
+
+			</div>
+
+
+			<div class="col-md-5"><input class="form-control" type="text " name="" id="valor" placeholder="valor">
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-warning" id="aplicarfiltro">aplicar filtro</button>
+			</div>
+		</div>
+	</div>
+	<div id="contenedor" class="container">
+	</div>
+
+
+	<table class="table table-bordered" table-striped-rows>
+		<thead>
+			<tr>
+				<th>NOMBRE</th>
+				<th>PRECIO</th>
+				<th>STOCK</th>
+				<th>DESCRIPCION</th>
+				<th>MARCA</th>
+				<th>ACCIONES</th>
+			</tr>
+		</thead>
+
+		<tbody id="tbody">
+
+
+		</tbody>
+	</table>
+
+	<p class="text-info">SUBTOTAL: $<strong id="subtotal">0</strong></p>
+
+	<button class="btn btn-success" id="reseteado">
+		<i class="bi bi-trash"></i>
+		<span>eliminar todo</span>
+	</button>
+
+	<div class="row">
+		<div class="col-5"> <button class="btn btn-dark mt-2" id="boton-crear" onclick="redireccionarPago()">Pagar<i
+					class="bi bi-check"></i></button>
+
+		</div>
+		<script src="pagar.js"></script>
+	</div>
+>>>>>>> 164e4675b349e0d064a8d881d848d79a5132117a
 
 	<script src="main.js"></script>
 </body>
