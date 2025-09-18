@@ -7,4 +7,7 @@ class Producto{
 		this.descripcion = descripcion
 		this.stock = stock
 	}
+datos() {
+		return `id ${this.id} nombre: ${this.nombre} precio: ${this.precio} descripcion: ${this.descripcion} stock: ${this.stock}`
+	}
 }
