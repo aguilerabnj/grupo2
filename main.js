@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 class Persona {
 	constructor(nombre, dni, edad) {
@@ -32,13 +30,12 @@ class Persona {
 
 
 		});
-			return acum * (1.21)
+		return acum * (1.21)
 	}
 
 
 }
 //navbar
->>>>>>> 164e4675b349e0d064a8d881d848d79a5132117a
 class Producto {
 	constructor(id, nombre, precio, descripcion, stock, marca) {
 		this.id = id
@@ -48,30 +45,18 @@ class Producto {
 		this.descripcion = descripcion
 		this.stock = stock
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> 164e4675b349e0d064a8d881d848d79a5132117a
 	datos() {
 		return `id ${this.id} nombre: ${this.nombre} precio: ${this.precio} descripcion: ${this.descripcion} stock: ${this.stock}`
 	}
 }
 
-<<<<<<< HEAD
+let listadeprefumes = [
+	new Producto(1, "Miss dior", 500, "fresca y embriagadora", 50),
+	new Producto(2, "Carolina herrera", 600, "Notas de salida: flor de azahar, notas verdes, palo de rosa y bergamota", 40),
+	new Producto(3, "Sweet thooth", 700, "malvavisco (bombón), chocolate, Jengibre confitado y bergamota; las Notas de Corazón son vainilla de Madagascar, leche de coco y jazmín", 35),
+	new Producto(4, "Cloud", 700, " olor dulce, gourmand y atalcado, con notas destacadas de lavanda, pera, bergamota, coco batido, praliné, orquídea de vainilla, almizcle y maderas cremosas", 43),
+]
 
-let contenedor = document.getElementById("contenedor")
-let tarjeta = document.getElementById("tarjeta")
-let titulo = document.createElement("h1")
-titulo.textContent = "paco rabanne"
-contenedor.appendChild(tarjeta)
-=======
-let listadeprefumes= [
-    new Producto(1,"Miss dior",500,"fresca y embriagadora",50),
-    new Producto(2,"Carolina herrera",600,"Notas de salida: flor de azahar, notas verdes, palo de rosa y bergamota",40),
-    new Producto(3,"Sweet thooth",700,"malvavisco (bombón), chocolate, Jengibre confitado y bergamota; las Notas de Corazón son vainilla de Madagascar, leche de coco y jazmín",35),
-    new Producto(4,"Cloud",700," olor dulce, gourmand y atalcado, con notas destacadas de lavanda, pera, bergamota, coco batido, praliné, orquídea de vainilla, almizcle y maderas cremosas",43),
-    ]
-	
 const persona2 = new Persona("juan", 48391470, 17)
 
 let personas = []
@@ -146,7 +131,7 @@ function cart() {
 	}
 	listadeprefumes.forEach(x => {
 
-let columna = document.createElement("div")
+		let columna = document.createElement("div")
 		columna.classList.add("col-4")
 		let card = document.createElement("div")
 		card.classList.add("card")
@@ -173,7 +158,7 @@ let columna = document.createElement("div")
 		p1.classList.add("card-text")
 		p1.textContent = ` precio ${x.precio} - stock ${x.stock}`
 		cardbody.appendChild(p1)
-        //boton
+		//boton
 		let button = document.createElement("button")
 		button.classList.add("btn")
 		button.textContent = "ADD"
@@ -189,8 +174,14 @@ let columna = document.createElement("div")
 		fila.appendChild(columna)
 	})
 }
-	let botonfiltro = document.querySelector("#aplicarfiltro")
+
+let botonfiltro = document.querySelector("#aplicarfiltro")
 botonfiltro.addEventListener("click", function () {
 	cart()
 })
->>>>>>> 164e4675b349e0d064a8d881d848d79a5132117a
+
+let contenedor = document.getElementById("contenedor")
+let tarjeta = document.getElementById("tarjeta")
+let titulo = document.createElement("h1")
+titulo.textContent = "paco rabanne"
+contenedor.appendChild(tarjeta)
