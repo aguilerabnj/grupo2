@@ -25,14 +25,24 @@ function redireccionarPago() {
 }
 
 let contenedor = document.getElementById("contenedor")
+let fila = document.createElement("div")
+fila.classList.add("row")
+let columna = document.createElement("div")
+columna.classList.add("col-4")
 let tarjeta = document.getElementById("tarjeta1")
 listadeprefumes.forEach(x=> {
 let titulo = document.createElement("h1")
 titulo.textContent = x.nombre
 let imagen = document.createElement("img")
-imagen.src = "https://picsum.photos/200/300"
-let precio = 
-tarjeta.append(titulo, imagen)
+imagen.src = "https://picsum.photos/190/190"
+let precio = document.createElement("H3")
+precio.textContent=x.precio+"-U$D"
+let descripcion = document.createElement("p")
+descripcion.textContent = `${x.descripcion}`
+let stock = document.createElement("h4")
+stock.textContent = `stock ${x.stock}`
+tarjeta.append(titulo, imagen,precio,descripcion, stock)
 })
-
-contenedor.appendChild(tarjeta)
+columna.appendChild(tarjeta)
+fila.appendChild(columna)
+contenedor.appendChild(fila)
